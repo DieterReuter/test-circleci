@@ -10,11 +10,11 @@ checkout:
 dependencies:
   pre:
     - go get github.com/constabulary/gb/...
+  override:
+    - gb build all
+  post:
+    - ./scripts/package.sh
 
 test:
   override:
     - gb test
-
-deployment:
-  override:
-    - gb build all
