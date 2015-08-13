@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    America/Los_Angeles
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+
+dependencies:
+  pre:
+  	- go get github.com/constabulary/gb/...
+
+test:
+  override:
+	- gb test
