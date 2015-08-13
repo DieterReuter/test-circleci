@@ -16,3 +16,5 @@ test:
     - gb test
 
 deployment:
+  override:
+    - gb build all
