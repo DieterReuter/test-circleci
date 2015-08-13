@@ -9,8 +9,8 @@ checkout:
 
 dependencies:
   pre:
-  	- go get github.com/constabulary/gb/...
+    - go get github.com/constabulary/gb/...
 
 test:
   override:
-	- gb test
+    - gb test
