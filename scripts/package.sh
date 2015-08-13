@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 REV=$(git rev-parse HEAD | cut -c1-6)
 if [ -z "$CIRCLE_ARTIFACTS" ]; then
   DEST="./pkg"
