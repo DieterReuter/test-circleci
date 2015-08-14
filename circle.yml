@@ -21,7 +21,9 @@ dependencies:
   post:
     - ./scripts/package.sh
     - which gh-release
-    - ls -al ./bin/ ./uploads/
+    - pwd
+    - echo $CIRCLE_ARTIFACTS
+    - ls -al $CIRCLE_ARTIFACTS/
 
 test:
   override:
