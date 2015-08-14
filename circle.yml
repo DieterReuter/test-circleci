@@ -2,6 +2,11 @@ machine:
   timezone:
     America/Los_Angeles
 
+general:
+  artifacts:
+    - "./bin"
+    - "./uploads" 
+
 checkout:
   post:
     - git submodule sync
@@ -16,6 +21,7 @@ dependencies:
   post:
     - ./scripts/package.sh
     - which gh-release
+    - ls -al ./bin/ ./uploads/
 
 test:
   override:

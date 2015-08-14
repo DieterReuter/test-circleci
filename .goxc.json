@@ -1,5 +1,5 @@
 {
-  "ArtifactsDest": "./pkg",
+  "ArtifactsDest": "./uploads",
   "Tasks": [
     "xc",
     "archive-zip",
