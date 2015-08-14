@@ -23,7 +23,9 @@ dependencies:
     - which gh-release
     - pwd
     - echo $CIRCLE_ARTIFACTS
-    - ls -al $CIRCLE_ARTIFACTS/
+    - ls -alR $CIRCLE_ARTIFACTS/
+    - ls -alR $CIRCLE_ARTIFACTS/snapshot/*.zip
+    - ls -alR $CIRCLE_ARTIFACTS/snapshot/*.tar.gz
 
 test:
   override:
