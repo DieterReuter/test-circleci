@@ -9,11 +9,13 @@ checkout:
 
 dependencies:
   pre:
+    - go get github.com/progrium/gh-release
     - go get github.com/constabulary/gb/...
   override:
     - gb build all
   post:
     - ./scripts/package.sh
+    - which gh-release
 
 test:
   override:
